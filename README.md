@@ -10,4 +10,5 @@ Projeto para o processo seletivo da V3L0Z Hub Recife utilizando a API RestCountr
 
 Recomendação: Execute com a extensão Live Server
 
-##Outra forma de conferir o projeto
+## Outra forma de conferir o projeto
+1. Atráves deste link do Vercel: https://around-the-world-chi.vercel.app/
