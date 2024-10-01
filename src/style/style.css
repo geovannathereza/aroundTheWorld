@@ -1,0 +1,262 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('../img/aroundtheworldbackground.jpg');
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    font-family: 'Arial', sans-serif;
+}
+
+#box {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    max-width: 650px;
+    width: 90%;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 30px auto;
+}
+
+#logo {
+    text-align: center;
+}
+
+#logo img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 20px;
+    color: white;
+}
+
+#pesquisar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 4px 12px;
+}
+
+#pesquisar input {
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    width: 100%;
+    color: white;
+}
+
+#pesquisar input::placeholder {
+    color: white;
+}
+
+#pesquisar input:focus-visible {
+    outline: none;
+}
+
+#pesquisar button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+#botao1 button, #botao2 button {
+    text-decoration: underline;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+#dropdownFiltro label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 1px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#dropdownFiltro input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#dropdownFiltro input[type="checkbox"]:checked {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-color: #063c6a;
+}
+
+#dropdownFiltro input[type="checkbox"]:checked::after {
+    content: '\f00c';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #063c6a;
+    position: absolute;
+    left: 3px;
+    top: 2px;
+    font-size: 14px;
+}
+
+#dropdownOrdenar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#dropdownOrdenar li {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    border: 2px solid white;
+    border-radius: 20px;
+    color: white;
+    width: 100%;
+}
+
+#dropdownOrdenar li:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#dropdownOrdenar li:active {
+    border-color: #063c6a;
+    color: #063c6a;
+}
+
+#container2 {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 20px;
+    padding-right: 15px;
+}
+
+#container2::-webkit-scrollbar {
+    width: 10px;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+#container2::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 10px;
+}
+
+a {
+    text-decoration-line: none;
+}
+
+#containerPaises {
+    margin: 9px;
+}
+#containerPais {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s ease-in-out;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#containerPais:hover {
+    transform: scale(1.03);
+}
+
+#containerPais img {
+    width: 50%;
+    border-radius: 10px;
+}
+
+#conteudoPais {
+    padding-inline: 16px;
+    color: white;
+    font-size: 16px;
+    align-items: center;
+}
+
+#conteudoPais h2 {
+    font-size: 18px;
+}
+
+#coluna1, #coluna3 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+#coluna2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+@media (max-width: 768px) {
+    #pesquisar {
+        width: 90%;
+    }
+
+    #pesquisar input {
+        width: 100%;
+    }
+
+    #dropdownOrdenar ul {
+        flex-direction: column;
+    }
+
+    #dropdownOrdenar li {
+        width: 100%;
+    }
+
+    #container2 {
+        padding-right: 0;
+    }
+
+    #containerPais {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #containerPais img {
+        width: 100%;
+    }
+
+    #logo img {
+        max-width: 250px;
+    }
+
+    #dropdownOrdenar li {
+        width: 80%;
+    }
+
+    #coluna2 {
+        grid-template-columns: 1fr;
+    }
+
+}

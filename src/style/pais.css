@@ -1,0 +1,130 @@
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('../img/aroundtheworldbackground.jpg');
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#box {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    max-width: 650px;
+    width: 90%;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 30px;
+    color: white;
+}
+
+#logo {
+    text-align: center;
+}
+
+#logo img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 5%;
+}
+
+a {
+    text-decoration: underline;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 100%;
+    color: white;
+    font-family: sans-serif;
+}
+
+#containerPaises {
+    color: white;
+    display: flex;
+    gap: 3%;
+    justify-content: center;
+    align-items: center;
+}
+
+#containerPaises img {
+    width: 37%;
+}
+
+#containerPais {
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+#titulo {
+    line-height: 95%;
+}
+
+#containerInfo {
+    display: flex;
+    text-align: left;
+    gap: 3%;
+}
+
+#info1 {
+    white-space: nowrap; 
+}
+
+@media (max-width: 768px) {
+    #box {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    #containerPaises {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #containerPaises img {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    #containerInfo {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #info1, #info2 {
+        white-space: normal;
+    }
+}
+
+@media (max-width: 480px) {
+    #box {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    a {
+        font-size: 90%;
+    }
+
+    #titulo {
+        font-size: 1.5em;
+    }
+
+    #titulo2 {
+        font-size: 1.2em;
+    }
+
+    #logo img {
+        max-width: 250px;
+    }
+}
